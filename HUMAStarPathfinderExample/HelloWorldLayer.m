@@ -91,6 +91,7 @@
 	CCSequence *sequence = [CCSequence actionWithArray:actions];
 	[self.player runAction:sequence];
     }
+}
 
 #pragma mark - HUMAStarPathfinderDelegate
 - (BOOL)pathfinder:(HUMAStarPathfinder *)pathFinder canWalkToNodeAtTileLocation:(CGPoint)tileLocation {
