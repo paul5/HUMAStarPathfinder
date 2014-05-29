@@ -133,7 +133,7 @@
 	// if we can't actually get a path to the target node
 	// The algorithm calculates the node closer to the target
         NSArray *neighbors = [self findAdjacentNodesForNode:self.targetNode];
-        NSLog(neighbors.debugDescription);
+
         
         float best=1000;
         int index=0;
