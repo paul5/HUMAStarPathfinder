@@ -86,9 +86,11 @@
 		[actions addObject:moveTo];
 	}
 	
+    // Fix the crash if there are not moves available
+	if (actions.count!=0) {
 	CCSequence *sequence = [CCSequence actionWithArray:actions];
 	[self.player runAction:sequence];
-}
+    }
 
 #pragma mark - HUMAStarPathfinderDelegate
 - (BOOL)pathfinder:(HUMAStarPathfinder *)pathFinder canWalkToNodeAtTileLocation:(CGPoint)tileLocation {
